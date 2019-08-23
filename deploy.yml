@@ -246,7 +246,7 @@ Resources:
       IamInstanceProfile: !Ref ProfileWithRolesForUdagram
       SecurityGroups:
         - Ref: LoadBalacerSecurityGroup
-      InstanceType: t2.micro
+      InstanceType: t3.small
       BlockDeviceMappings:
         - DeviceName: "/dev/sdk"
           Ebs:
@@ -323,7 +323,7 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName} Bastion
       ImageId: ami-005bdb005fb00e791
-      InstanceType: t2.micro
+      InstanceType: t3.small
       SubnetId:
         Ref: PublicSubnet1
       AvailabilityZone: !Select [0, !GetAZs ""]
