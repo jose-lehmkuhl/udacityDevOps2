@@ -330,7 +330,8 @@ Resources:
       SecurityGroupIds:
         - Ref: UdagramSSHSecurityGroup
 
-  #### EC2 Instance bucket policy
+  #######################################################################################
+
   ProfileWithRolesForUdagram:
     Type: AWS::IAM::InstanceProfile
     Properties:
